@@ -20,7 +20,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.createfood');
     }
 
     /**
@@ -28,7 +28,13 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $val = $request->validate([
+            'nameFood' => 'required',
+            'priceFood' => 'required',
+            'categoriesFood' => 'required',
+            'stockFood' => 'required'
+        ]);
+        dd($val);
     }
 
     /**
