@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoriesFoodController;
 use App\Http\Controllers\FoodController;
-use App\Models\CategoriesFood;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.pages.index');
 });
+Route::get('/index.html', function () {
+    return view('admin.pages.index');
+});
 Route::resource('food', FoodController::class);
-Route::resource('category', CategoriesFood::class);
+Route::resource('category', CategoriesFoodController::class);
