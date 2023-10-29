@@ -1,6 +1,7 @@
 <div class="card">
     <div class="card-body">
         <h4 class="card-title">Add Food</h4>
+        @dd($data);
         <form class="forms-sample" action="{{ route('food.store') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -26,7 +27,7 @@
             <div class="form-group">
                 <label for="exampleInputConfirmPassword1">Stok Makanan</label>
                 <input type="number" class="form-control text-light" id="exampleInputConfirmPassword1"
-                    placeholder="Stok Food" name="stockFoods">
+                    placeholder="Stok Food" name="stockFood">
             </div>
             <button type="submit" class="btn btn-primary me-2">Submit</button>
         </form>

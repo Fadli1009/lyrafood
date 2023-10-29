@@ -12,7 +12,8 @@ class CategoriesFoodController extends Controller
      */
     public function index()
     {
-        //
+        $data = CategoriesFood::all();
+        return view('admin.pages.allcategories', compact(['data']));
     }
 
     /**

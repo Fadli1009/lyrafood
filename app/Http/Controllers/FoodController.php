@@ -33,8 +33,14 @@ class FoodController extends Controller
             'priceFood' => 'required',
             'categoriesFood' => 'required',
             'stockFood' => 'required'
+        ], [
+            'nameFood.required' => 'makanan harus diisi',
+            'priceFood.required' => 'harga harus diisi',
+            'categoriesFood.required' => 'kategori makanan harus dipilih',
+            'stockFood.required' => 'stok wajib diisi'
         ]);
-        dd($val);
+        Food::create($val);
+        return redirect('/');
     }
 
     /**

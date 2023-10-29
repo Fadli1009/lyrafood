@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo text-light" href="index.html">Lyrafood</a>
-        <a class="sidebar-brand brand-logo-mini text-light" href="index.html">L</a>
+        <a class="sidebar-brand brand-logo text-light" href="/">Lyrafood</a>
+        <a class="sidebar-brand brand-logo-mini text-light" href="/">L</a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
@@ -99,7 +99,7 @@
             </a>
             <div class="collapse" id="ui-basics">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">All Categories</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('category.index') }}">All Categories</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Add Categories
                         </a></li>
