@@ -12,7 +12,8 @@ class FoodController extends Controller
      */
     public function index()
     {
-        //
+        $data = Food::all();
+        return view('admin.pages.foodall', compact(['data']));
     }
 
     /**
@@ -32,12 +33,14 @@ class FoodController extends Controller
             'nameFood' => 'required',
             'priceFood' => 'required',
             'categoriesFood' => 'required',
-            'stockFood' => 'required'
+            'stockFood' => 'required',
+            'foodImg' => 'required'
         ], [
             'nameFood.required' => 'makanan harus diisi',
             'priceFood.required' => 'harga harus diisi',
             'categoriesFood.required' => 'kategori makanan harus dipilih',
-            'stockFood.required' => 'stok wajib diisi'
+            'stockFood.required' => 'stok wajib diisi',
+            'foodImg.required' => 'wajib masukan foto makanan'
         ]);
         Food::create($val);
         return redirect('/');
@@ -72,6 +75,7 @@ class FoodController extends Controller
      */
     public function destroy(Food $food)
     {
-        //
+        $food->delete();
+        return redirect('/food');
     }
 }

@@ -79,7 +79,7 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">All Food</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('food.index') }}">All Food</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('food.create') }}">Add Food </a></li>
                 </ul>

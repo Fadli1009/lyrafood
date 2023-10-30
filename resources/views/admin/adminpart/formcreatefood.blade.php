@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="img">Gambar Makanan</label>
-                <input type="file" class="form-control file-upload-info text-light" id="img">
+                <input type="file" class="form-control file-upload-info text-light" name="foodImg">
             </div>
             <button type="submit" class="btn btn-primary me-2">Submit</button>
         </form>
