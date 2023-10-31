@@ -101,7 +101,7 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('category.index') }}">All Categories</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Add Categories
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('category.create') }}">Add Categories
                         </a></li>
                 </ul>
             </div>

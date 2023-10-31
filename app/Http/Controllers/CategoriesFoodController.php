@@ -21,7 +21,7 @@ class CategoriesFoodController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.addcategory');
     }
 
     /**
@@ -29,7 +29,12 @@ class CategoriesFoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vali = $request->validate([
+            'name' => 'required'
+        ], [
+            'name.required' => 'Wajib diisi'
+        ]);
+        CategoriesFood::create($vali);
     }
 
     /**
