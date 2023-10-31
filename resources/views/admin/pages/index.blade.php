@@ -1,4 +1,5 @@
 @extends('template.base')
+@section('title','Home')
 @section('content')
 <div class="row">
     <div class="col-sm-4 grid-margin">
@@ -115,8 +116,6 @@
                             <td>{{ $item->priceFood }}</td>
                             <td>{{ $item->categoriesFood}}</td>
                             <td>{{ $item->stockFood }}</td>
-
-                            <td><label class="badge badge-danger">Pending</label></td>
                         </tr>
                         @endforeach
                     </tbody>

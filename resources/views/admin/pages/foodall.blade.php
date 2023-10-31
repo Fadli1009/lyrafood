@@ -15,7 +15,8 @@
                 <h5>{{ $item->stockFood }}</h5>
             </div>
             <div class="card-footer d-flex justify-content-between">
-                <a href="{{ $item->id }}" class="btn btn-success"><i class="mdi mdi-cart fs-3"></i></a>
+                <a href="{{ route('food.edit',$item->id) }}" class="btn btn-success"><i
+                        class="mdi mdi-border-color fs-3"></i></a>
                 <form action="{{ route('food.destroy',$item->id) }}" method="post">
                     @csrf
 

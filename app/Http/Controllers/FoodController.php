@@ -57,9 +57,10 @@ class FoodController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Food $food)
+    public function edit($id)
     {
-        //
+        $data = Food::find($id);
+        return view('admin.pages.editfood', compact(['data']));
     }
 
     /**
@@ -67,7 +68,21 @@ class FoodController extends Controller
      */
     public function update(Request $request, Food $food)
     {
-        //
+        $val = $request->validate([
+            'nameFood' => 'required',
+            'priceFood' => 'required',
+            'categoriesFood' => 'required',
+            'stockFood' => 'required',
+            'foodImg' => 'required'
+        ], [
+            'nameFood.required' => 'makanan harus diisi',
+            'priceFood.required' => 'harga harus diisi',
+            'categoriesFood.required' => 'kategori makanan harus dipilih',
+            'stockFood.required' => 'stok wajib diisi',
+            'foodImg.required' => 'wajib masukan foto makanan'
+        ]);
+        $food->update($val);
+        return redirect('/food');
     }
 
     /**

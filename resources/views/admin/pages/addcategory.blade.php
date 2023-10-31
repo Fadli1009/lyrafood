@@ -1,4 +1,5 @@
 @extends('template.base')
+
 @section('content')
 <div class="card p-4">
     <form action="{{ route('category.store') }}" method="post">

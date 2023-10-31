@@ -69,15 +69,14 @@
             <span class="nav-link">Manage Food</span>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                aria-controls="ui-basic">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-food" aria-expanded="false" aria-controls="ui-food">
                 <span class="menu-icon">
                     <i class="mdi mdi-food"></i>
                 </span>
                 <span class="menu-title">Food Control</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
+            <div class="collapse" id="ui-food">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('food.index') }}">All Food</a>
                     </li>
@@ -89,20 +88,20 @@
             <span class="nav-link">Manage Categories</span>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basics" aria-expanded="false"
-                aria-controls="ui-basic">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-category" aria-expanded="false"
+                aria-controls="ui-category">
                 <span class="menu-icon">
                     <i class="mdi mdi-chart-arc"></i>
                 </span>
                 <span class="menu-title">Categories Control</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basics">
+            <div class="collapse" id="ui-category">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('category.index') }}">All Categories</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('category.create') }}">Add Categories
-                        </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('category.create') }}">Add Categories</a>
+                    </li>
                 </ul>
             </div>
         </li>
