@@ -12,10 +12,10 @@ class AdminController extends Controller
     public function index()
     {
         $food = Food::count();
-        $harga = DB::table('food')->sum('priceFood');
         $category = CategoriesFood::count();
         $foodtbl = Food::paginate(4);
         $data = Food::all();
+        $harga = $data->sum('priceFood');
         return view('admin.pages.index', compact(['food', 'category', 'foodtbl', 'data', 'harga']));
     }
 }
